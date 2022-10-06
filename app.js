@@ -11,9 +11,6 @@ app.set('view engine', 'ejs');
 
 //To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 app.use(express.static('public'));
-// //Tell app to use methodOverride and pass the argument you want to use,here mine is _method//MethodOverride here listens to _method as config below by me
-// app.use(methodOverride('_method'));
-
 
 
 // INDEX ROUTE
