@@ -8,17 +8,30 @@ const PORT = process.env.PORT || 9000
 app.use(express.urlencoded({ extended: true}));
 //Tell express the view Engine to use
 app.set('view engine', 'ejs');
-
 //To serve static files such as images, CSS files, and JavaScript files, use the express.static built-in middleware function in Express.
 app.use(express.static('public'));
 
 
 // INDEX ROUTE
-app.get("/", (req, res) => {
-    res.render("index");
-
+app.get('/', (req, res) => {
+    res.render("./index");
 });
 
+app.get('/index', (req, res) => {
+    res.render("./index");
+});
+
+app.get('/about', (req, res) =>{
+    res.render("./about");
+});
+
+app.get('/contact', (req, res) => {
+    res.render("./contact");
+});
+
+app.get('/gallery', (req, res) => {
+    res.render("./Gallery");
+});
 //the forM has to be pre filled with tHE data otherwise we wont be editing rather typing stuff over.
 //1st find the actual blog we wanna edit in the edit route.
 //using the id to find the blog to edit. 
